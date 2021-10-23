@@ -3,9 +3,7 @@ package com.example.stockexchangeapi.controllers;
 import com.example.stockexchangeapi.models.Country;
 import com.example.stockexchangeapi.services.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,10 @@ public class CountryController {
     @RequestMapping("/countries/{id}")
     public Country getCountry(@PathVariable String id){
         return countryService.getCountry(id);
+    }
+
+    @RequestMapping(method= RequestMethod.POST,value = "/countries")
+    public void addCountry(@RequestBody Country country){
+        countryService.addCountry(country);
     }
 }
