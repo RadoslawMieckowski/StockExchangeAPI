@@ -25,4 +25,11 @@ public class CountryService {
     public void addCountry(Country country){
         listOfCountries.add(country);
     }
+
+    public void updateCountry(String id, Country country) {
+        for (int i=0;i<listOfCountries.size();i++){
+            Country c =listOfCountries.get(i);
+            if (c.getId().equals(id))listOfCountries.set(i,country);
+        }
+    }
 }
