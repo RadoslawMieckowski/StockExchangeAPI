@@ -13,7 +13,7 @@ public class CountryController {
    @Autowired
     private CountryService countryService;
 
-    @RequestMapping("/companies")
+    @RequestMapping("/countries")
     public List<Country> getAllCompanies(){
         return countryService.getAllCountries();
     }

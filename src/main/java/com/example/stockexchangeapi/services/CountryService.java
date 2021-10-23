@@ -10,7 +10,7 @@ public class CountryService {
     private List<Country> listOfCountries = Arrays.asList(
             new Country("USA","NASDAQ","Electronic technology","APPL"),
             new Country("United Kingdom","FTSE","Finance","BARC"),
-            new Country("BMWG","Germany","DAX","Luxury goods"),
+            new Country("Germany","DAX","Luxury goods","BMWG"),
             new Country("France","CAC","Services","CARR")
             );
     public List<Country> getAllCountries(){
