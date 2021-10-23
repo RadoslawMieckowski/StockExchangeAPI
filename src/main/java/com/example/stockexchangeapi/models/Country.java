@@ -3,7 +3,7 @@ package com.example.stockexchangeapi.models;
 import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Country {
-    private String name;
+    private String id;
     private String stockExchange;
     private String sector;
     private String company;
@@ -12,8 +12,8 @@ public class Country {
         return company;
     }
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
 
     public String getStockExchange() {
