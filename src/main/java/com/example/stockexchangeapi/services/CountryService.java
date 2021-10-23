@@ -16,4 +16,8 @@ public class CountryService {
     public List<Country> getAllCountries(){
         return listOfCountries;
     }
+
+    public Country getCountry(String id) {
+        return (Country) listOfCountries.stream().filter(country->country.getId().equals(id));
+    }
 }
