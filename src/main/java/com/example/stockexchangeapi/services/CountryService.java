@@ -18,6 +18,6 @@ public class CountryService {
     }
 
     public Country getCountry(String id) {
-        return (Country) listOfCountries.stream().filter(country->country.getId().equals(id));
+        return listOfCountries.stream().filter(country->country.getId().equals(id)).findFirst().get();
     }
 }
