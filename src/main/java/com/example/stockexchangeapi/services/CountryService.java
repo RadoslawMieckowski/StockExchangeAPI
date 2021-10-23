@@ -32,4 +32,8 @@ public class CountryService {
             if (c.getId().equals(id))listOfCountries.set(i,country);
         }
     }
+
+    public void deleteCountry(String id){
+        listOfCountries.removeIf(country->country.getId().equals(id));
+    }
 }
